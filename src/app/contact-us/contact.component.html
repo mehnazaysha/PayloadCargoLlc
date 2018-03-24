@@ -1,1 +1,83 @@
-contact us
+<!-- Page Content -->
+<div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Contact </h1>
+
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a routerLink="home">Home</a>
+        </li>
+        <li class="breadcrumb-item active">Contact</li>
+    </ol>
+
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Map Column -->
+        <div class="col-lg-8 mb-4">
+            <!-- Embedded Google Map -->
+            <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d118864.04453179783!2d55.35167601495446!3d25.245113481501296!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf52e144c5453d43c!2sDubai+Airport+Cargo+Village!5e0!3m2!1sen!2sus!4v1521905119906"></iframe>
+        </div>
+        <!-- Contact Details Column -->
+        <div class="col-lg-4 mb-4">
+            <h3>Contact Details</h3>
+            <p>
+                PAYLOAD CARGO , 2026, Dubai Aircargo Terminal Building , Freight Gate - 1 , Dubai Cargo Village , Dubai.
+            </p>
+            <p>
+                Tel : + 97 142 822 133
+                <br /> Fax: + 97 142 821 133
+                <br /> 24 Hrs Contact : + 97 150 215 7060.
+                <br />
+                <br />
+                <a href="mailto:sales@payloadcargo.com" style="color:#ffffff;font-weight:bold;word-wrap:break-word;">sales@payloadcargo.com</a>
+                <br />
+                <a href="mailto:shiju@payloadcargo.com" style="color:#ffffff;font-weight:bold;word-wrap:break-word;">shiju@payloadcargo.com</a>
+            </p>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Contact Form -->
+    <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+    <div class="row">
+        <div class="col-lg-8 mb-4">
+            <h3>Send us a Message</h3>
+            <!-- <form name="sentMessage" id="contactForm" novalidate> -->
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label>Full Name:</label>
+                        <input type="text" class="form-control" [(ngModel)]="name" name="name" required data-validation-required-message="Please enter your name.">
+                        <p class="help-block"></p>
+                    </div>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label>Phone Number:</label>
+                        <input type="tel" class="form-control" [(ngModel)]="phone" name="phone" required data-validation-required-message="Please enter your phone number.">
+                    </div>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label>Email Address:</label>
+                        <input type="email" class="form-control" [(ngModel)]="email" name="email" required data-validation-required-message="Please enter your email address.">
+                    </div>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label>Message:</label>
+                        <textarea rows="10" cols="100" class="form-control" [(ngModel)]="message" name="message" required data-validation-required-message="Please enter your message"
+                            maxlength="999" style="resize:none"></textarea>
+                    </div>
+                </div>
+                <div id="success"></div>
+                <!-- For success/fail messages -->
+                <button type="submit" class="btn btn-primary" (click)="submitForm()" id="sendMessageButton">Send Message</button>
+            <!-- </form> -->
+        </div>
+
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->

@@ -107,7 +107,6 @@
     <!-- Features Section -->
     <div class="row">
         <div class="col-lg-6">
-
             <h2>Our Promise</h2>
             <p>We Value the Corporate culture that Payload Cargo has maintained since its inception. The Culture includes the
                 ability to think on our feet and take action, the ability to handle situation with persistence and passion,
@@ -118,7 +117,7 @@
                 provide high-quality service that makes customers rely on and appreciate Payload Cargo.</p>
         </div>
         <div class="col-lg-6">
-            <img class="img-fluid rounded" src="http://placehold.it/700x450" alt="">
+            <img class="img-fluid rounded" src="../assets/images/promise.jpg" alt="">
         </div>
     </div>
     <!-- /.row -->
@@ -133,46 +132,55 @@
         </button>
     </div>
     <div class="modal-body">
-        <div class="form-group">
-            <label>Name</label>
-            <input type="text" placeholder="firstname" name="fname" id="fname" required />
-            <span class="error">*</span>
-            <input type="text" placeholder="lastname" name="lname" id="lname" required />
-            <span class="error">*</span>
+        <div class="control-group form-group">
+            <div class="controls">
+                <label>Full Name:</label>
+                <input type="text" class="form-control" [(ngModel)]="name" name="name" placeholder="Full Name" required>
+                <p class="help-block"></p>
+            </div>
+        </div>
+        <div class="control-group form-group">
+            <div class="controls">
+                <label>Shipment:</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" [(ngModel)]="shipmentFrom" name="shipmentFrom" placeholder="Shipment from" required>
+                    <input type="text" class="form-control" [(ngModel)]="shipmentTo" name="shipmentTo" placeholder="Shipment to" required>
+                </div>
+            </div>
+        </div>
+        <div class="control-group form-group">
+            <div class="controls">
+                <label>Consignment Info:</label>
+                <input type="text" class="form-control" placeholder="Company Name" [(ngModel)]="companyName" name="cname" required />
+                <label></label>
+                <div class="input-group">
+                    <input type="number" class="form-control" placeholder="Weight" [(ngModel)]="weight" name="weight" required />
+                    <input type="number" class="form-control" placeholder="Volume" [(ngModel)]="volume" name="volume" required />
+                </div>
+            </div>
+        </div>
+        <div class="control-group form-group">
+            <div class="controls">
+                <label>Contact Info:</label>
+                <input type="email" class="form-control" placeholder="Email Address" name="email" [(ngModel)]="email" required />
+                <label></label>
+                <div class="input-group">
+                    <input type="number" class="form-control" placeholder="Phone Prefix" name="prefix" [(ngModel)]="prefix" required />
+                    <input type="number" class="form-control" placeholder="Phone Number" name="phone" [(ngModel)]="phone" required />
+                </div>
+            </div>
+        </div>
 
-        </div>
-        <div class="form-group">
-            <label>Shipment</label>
-            <input type="text" placeholder="shipment from" name="from" id="from" required />
-            <span class="error">*</span>
-            <input type="text" placeholder="shipment to" name="to" id="to" required />
-            <span class="error">*</span>
-        </div>
-        <div class="form-group">
-            <label>Consignment Info</label>
-            <input type="text" placeholder="company name" name="cname" id="cname" required />
-            <span class="error">*</span>
-            <input type="number" placeholder="weight" name="weight" id="weight" required />
-            <span class="error">*</span>
-            <input type="number" placeholder="volume" name="volume" id="volume" required />
-            <span class="error">*</span>
-        </div>
-        <div class="form-group">
-            <label>Contact Info</label>
-            <input type="email" placeholder="email" name="email" id="email" required />
-            <span class="error">*</span>
-            <input type="number" placeholder="phone prefix" name="prefix" id="prefix" required />
-            <span class="error">*</span>
-            <input type="number" placeholder="phone number" name="phone" id="phone" required />
-            <span class="error">*</span>
-        </div>
-        <div class="form-group">
-            <label>Message</label>
-            <textarea type="text" name="message" id="message"></textarea>
+        <div class="control-group form-group">
+            <div class="controls">
+                <label>Message:</label>
+                <textarea type="text" class="form-control" name="message" [(ngModel)]="message"></textarea>
+                <p class="help-block"></p>
+            </div>
         </div>
     </div>
     <div class="modal-footer">
-        <button type="submit" name="submit" id="submit" class="btn btn-success" (click)="c('Close click')">Submit</button>
-        <button type="reset" name="reset" id="reset" class="btn btn-danger" (click)="c('Close click')">Clear</button>
+        <button type="submit" name="submit" class="btn btn-success" (click)="c('Close click')">Submit</button>
+        <button type="reset" name="reset" class="btn btn-danger" (click)="c('Close click')">Cancel</button>
     </div>
 </ng-template>

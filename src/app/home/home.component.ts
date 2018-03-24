@@ -10,6 +10,10 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
     styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+    name: string = '';
+    shipmentFrom: string = '';
+    shipmentTo: string = '';
+
 
     ngOnInit() {
     }
@@ -19,7 +23,8 @@ export class HomeComponent implements OnInit {
     open(content) {
         this.modalService.open(content, {
             backdrop: 'static',
-            keyboard: false
+            keyboard: false,
+            size: 'lg'
         });
     }
 

@@ -12,7 +12,7 @@ import { ContactComponent } from './contact-us/contact.component';
 import { NewsEventsComponent } from './news-events/news-events.component';
 import { SearchComponent } from './search/search.component';
 import { AgentNetworkComponent } from './agent_network/agentNetwork.component';
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,6 +28,7 @@ import { AgentNetworkComponent } from './agent_network/agentNetwork.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     NgbModule.forRoot(),
     AppRoutingModule
   ],
