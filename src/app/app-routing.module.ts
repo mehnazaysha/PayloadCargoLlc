@@ -8,6 +8,8 @@ import { ContactComponent } from './contact-us/contact.component';
 import { NewsEventsComponent } from './news-events/news-events.component';
 import { SearchComponent } from './search/search.component';
 import { AgentNetworkComponent } from './agent_network/agentNetwork.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { TermsComponent } from './terms/terms.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -18,6 +20,9 @@ const routes: Routes = [
     { path: 'search', component: SearchComponent },
     { path: 'agent-network', component: AgentNetworkComponent },
     { path: 'news-events', component: NewsEventsComponent },
+    { path: 'privacy', component: PrivacyComponent },
+    { path: 'terms', component: TermsComponent },
+
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];

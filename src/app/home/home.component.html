@@ -1,9 +1,14 @@
-<header style="padding-top: 70px;">
+<header style="padding-top: 110px;">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+
+
         </ol>
         <div class="carousel-inner" role="listbox">
             <!-- Slide One - Set the background image for this slide in the line below -->
@@ -25,6 +30,18 @@
                 <div class="carousel-caption d-none d-md-block">
                     <!-- <h3>Third Slide</h3>
                     <p>This is a description for the third slide.</p> -->
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('../assets/images/slide4.jpg')">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('../assets/images/slide5.jpg')">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('../assets/images/slide6.jpg')">
+                <div class="carousel-caption d-none d-md-block">
                 </div>
             </div>
         </div>
@@ -61,7 +78,7 @@
                     <p class="card-text">We develop comprehensive tailor made project logistics to meet our customer needs.</p>
                 </div>
                 <div class="card-footer">
-                    <a (click)="open(content)" class="btn btn-primary">Get Rate</a>
+                    <button (click)="open(content)" class="btn btn-primary">Get Rate</button>
                 </div>
             </div>
         </div>

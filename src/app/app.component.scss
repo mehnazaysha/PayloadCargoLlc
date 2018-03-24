@@ -1,11 +1,19 @@
 body {
-    padding-top: 54px;
-  }
-  
-  @media (min-width: 992px) {
+    padding-top: 64px;
+}
+
+@media (min-width: 992px) {
     body {
-      padding-top: 56px;
+        padding-top: 56px;
     }
-  }
-  
-  
+}
+
+.nav-link {
+    display: block;
+    padding: 0 0;
+}
+
+.navbar-nav {
+    font-size: 1.3rem;
+    font-weight: 600;
+}

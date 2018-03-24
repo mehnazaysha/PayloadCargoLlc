@@ -13,6 +13,10 @@ import { NewsEventsComponent } from './news-events/news-events.component';
 import { SearchComponent } from './search/search.component';
 import { AgentNetworkComponent } from './agent_network/agentNetwork.component';
 import { FormsModule } from '@angular/forms';
+import { AppServices } from './appServices/appServices';
+import { HttpModule } from '@angular/http';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { TermsComponent } from './terms/terms.component';
 
 @NgModule({
   declarations: [
@@ -24,15 +28,18 @@ import { FormsModule } from '@angular/forms';
     ContactComponent,
     NewsEventsComponent,
     SearchComponent,
-    AgentNetworkComponent
+    AgentNetworkComponent,
+    PrivacyComponent,
+    TermsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
     NgbModule.forRoot(),
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AppServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
