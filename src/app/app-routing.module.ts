@@ -6,6 +6,8 @@ import { CareersComponent } from './careers/careers.component';
 import { ServicesComponent } from './services/services.component';
 import { ContactComponent } from './contact-us/contact.component';
 import { NewsEventsComponent } from './news-events/news-events.component';
+import { SearchComponent } from './search/search.component';
+import { AgentNetworkComponent } from './agent_network/agentNetwork.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -13,6 +15,8 @@ const routes: Routes = [
     { path: 'careers', component: CareersComponent },
     { path: 'services', component: ServicesComponent },
     { path: 'contact', component: ContactComponent },
+    { path: 'search', component: SearchComponent },
+    { path: 'agent-network', component: AgentNetworkComponent },
     { path: 'news-events', component: NewsEventsComponent },
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: '**', redirectTo: 'home', pathMatch: 'full' },

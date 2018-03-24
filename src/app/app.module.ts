@@ -10,6 +10,8 @@ import { CareersComponent } from './careers/careers.component';
 import { AboutUsComponent } from './about-us/about.component';
 import { ContactComponent } from './contact-us/contact.component';
 import { NewsEventsComponent } from './news-events/news-events.component';
+import { SearchComponent } from './search/search.component';
+import { AgentNetworkComponent } from './agent_network/agentNetwork.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { NewsEventsComponent } from './news-events/news-events.component';
     CareersComponent,
     AboutUsComponent,
     ContactComponent,
-    NewsEventsComponent
+    NewsEventsComponent,
+    SearchComponent,
+    AgentNetworkComponent
   ],
   imports: [
     BrowserModule,

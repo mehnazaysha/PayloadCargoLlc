@@ -1,4 +1,4 @@
-<header>
+<header style="padding-top: 70px;">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -7,24 +7,24 @@
         </ol>
         <div class="carousel-inner" role="listbox">
             <!-- Slide One - Set the background image for this slide in the line below -->
-            <div class="carousel-item active" style="background-image: url('http://placehold.it/1900x1080')">
+            <div class="carousel-item active" style="background-image: url('../assets/images/slide1.jpg')">
                 <div class="carousel-caption d-none d-md-block">
-                    <h3>First Slide</h3>
-                    <p>This is a description for the first slide.</p>
+                    <!-- <h3>First Slide</h3>
+                    <p>This is a description for the first slide.</p> -->
                 </div>
             </div>
             <!-- Slide Two - Set the background image for this slide in the line below -->
-            <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+            <div class="carousel-item" style="background-image: url('../assets/images/slide2.jpg')">
                 <div class="carousel-caption d-none d-md-block">
-                    <h3>Second Slide</h3>
-                    <p>This is a description for the second slide.</p>
+                    <!-- <h3>Second Slide</h3>
+                    <p>This is a description for the second slide.</p> -->
                 </div>
             </div>
             <!-- Slide Three - Set the background image for this slide in the line below -->
-            <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+            <div class="carousel-item" style="background-image: url('../assets/images/slide3.jpg')">
                 <div class="carousel-caption d-none d-md-block">
-                    <h3>Third Slide</h3>
-                    <p>This is a description for the third slide.</p>
+                    <!-- <h3>Third Slide</h3>
+                    <p>This is a description for the third slide.</p> -->
                 </div>
             </div>
         </div>
@@ -42,178 +42,137 @@
 
 <!-- Page Content -->
 <div class="container">
+    <h1 class="my-4">Welcome to Payload Cargo</h1>
+    <section>
+        <p>Payload Cargo LLC is one of the leading privately owned logistics company in the UAE providing cost effective logistics
+            solutions worldwide.We believe in reliable , high quality , value for money freight solutions to our customers.</p>
+        <p>At Payload Cargo we are committed in delivering the best freight and logistics solutions globally. We develop comprehensive
+            tailor made project logistics to meet our customer needs.Our team is air and sea freight experts in delivering,
+            customers can rely on Payload Cargo for Fixed/Blocked space capacities with all major carriers worldwide.</p>
+    </section>
 
-    <h1 class="my-4">Welcome to Modern Business</h1>
 
     <!-- Marketing Icons Section -->
     <div class="row">
-        <div class="col-lg-4 mb-4">
+        <div class="col-lg-3 mb-3">
             <div class="card h-100">
-                <h4 class="card-header">Card Title</h4>
+                <h4 class="card-header">Get a Quick Rate!</h4>
                 <div class="card-body">
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+                    <p class="card-text">We develop comprehensive tailor made project logistics to meet our customer needs.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-primary">Learn More</a>
+                    <a (click)="open(content)" class="btn btn-primary">Get Rate</a>
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 mb-4">
+        <div class="col-lg-3 mb-3">
             <div class="card h-100">
-                <h4 class="card-header">Card Title</h4>
+                <h4 class="card-header">Track a Shipment!</h4>
                 <div class="card-body">
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus
-                        commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed
-                        eveniet, magni nostrum sint fuga.</p>
+                    <p class="card-text"> Here’s the fastest way to check the status of your shipment.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-primary">Learn More</a>
+                    <a href="http://www.aircargotracking.net/" class="btn btn-primary">Track</a>
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 mb-4">
+        <div class="col-lg-3 mb-3">
             <div class="card h-100">
-                <h4 class="card-header">Card Title</h4>
+                <h4 class="card-header">My Shipments!</h4>
                 <div class="card-body">
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+                    <p class="card-text">
+                        Payload Shipping is the online shipping solution that helps you manage express shipments.
+                    </p>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-primary">Learn More</a>
+                    <a routerLink="/search" class="btn btn-primary">Search</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 mb-3">
+            <div class="card h-100">
+                <h5 class="card-header">Our Agent Network!</h5>
+                <div class="card-body">
+                    <p class="card-text"> Payload Cargo is always nearby, providing convenient drop-off locations that will save you time and money.</p>
+                </div>
+                <div class="card-footer">
+                    <a routerLink="/agent-network" class="btn btn-primary">Find</a>
                 </div>
             </div>
         </div>
     </div>
     <!-- /.row -->
 
-    <!-- Portfolio Section -->
-    <h2>Portfolio Heading</h2>
-
-    <div class="row">
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-                <a href="#">
-                    <img class="card-img-top" src="http://placehold.it/700x400" alt="">
-                </a>
-                <div class="card-body">
-                    <h4 class="card-title">
-                        <a href="#">Project One</a>
-                    </h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente
-                        nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex
-                        quae? Nihil, dolorem!</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-                <a href="#">
-                    <img class="card-img-top" src="http://placehold.it/700x400" alt="">
-                </a>
-                <div class="card-body">
-                    <h4 class="card-title">
-                        <a href="#">Project Two</a>
-                    </h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque
-                        urna varius vitae.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-                <a href="#">
-                    <img class="card-img-top" src="http://placehold.it/700x400" alt="">
-                </a>
-                <div class="card-body">
-                    <h4 class="card-title">
-                        <a href="#">Project Three</a>
-                    </h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio
-                        distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae
-                        vero vel quam!</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-                <a href="#">
-                    <img class="card-img-top" src="http://placehold.it/700x400" alt="">
-                </a>
-                <div class="card-body">
-                    <h4 class="card-title">
-                        <a href="#">Project Four</a>
-                    </h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque
-                        urna varius vitae.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-                <a href="#">
-                    <img class="card-img-top" src="http://placehold.it/700x400" alt="">
-                </a>
-                <div class="card-body">
-                    <h4 class="card-title">
-                        <a href="#">Project Five</a>
-                    </h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque
-                        urna varius vitae.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-                <a href="#">
-                    <img class="card-img-top" src="http://placehold.it/700x400" alt="">
-                </a>
-                <div class="card-body">
-                    <h4 class="card-title">
-                        <a href="#">Project Six</a>
-                    </h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil
-                        provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi!
-                        Nemo, esse.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /.row -->
-
+    <hr>
     <!-- Features Section -->
     <div class="row">
         <div class="col-lg-6">
-            <h2>Modern Business Features</h2>
-            <p>The Modern Business template by Start Bootstrap includes:</p>
-            <ul>
-                <li>
-                    <strong>Bootstrap v4</strong>
-                </li>
-                <li>jQuery</li>
-                <li>Font Awesome</li>
-                <li>Working contact form with validation</li>
-                <li>Unstyled page elements for easy customization</li>
-            </ul>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit,
-                quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
+
+            <h2>Our Promise</h2>
+            <p>We Value the Corporate culture that Payload Cargo has maintained since its inception. The Culture includes the
+                ability to think on our feet and take action, the ability to handle situation with persistence and passion,
+                and a pioneering spirit that combines a positive attitude with speed. We aim to express our customer-first
+                orientation by creating new business to address customers needs. Under our regional management system, Payload
+                Cargo serves as an indispensable partner to its customers, and provide the best logistic solutions for each
+                customers needs. We will continue to work hard and take on new challenges all over the world in order to
+                provide high-quality service that makes customers rely on and appreciate Payload Cargo.</p>
         </div>
         <div class="col-lg-6">
             <img class="img-fluid rounded" src="http://placehold.it/700x450" alt="">
         </div>
     </div>
     <!-- /.row -->
-
-    <hr>
-
-    <!-- Call to Action Section -->
-    <div class="row mb-4">
-        <div class="col-md-8">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae
-                veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
-        </div>
-        <div class="col-md-4">
-            <a class="btn btn-lg btn-secondary btn-block" href="#">Call to Action</a>
-        </div>
-    </div>
-
 </div>
 <!-- /.container -->
+
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+        <h4 class="modal-title">Rate Enquiry</h4>
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" placeholder="firstname" name="fname" id="fname" required />
+            <span class="error">*</span>
+            <input type="text" placeholder="lastname" name="lname" id="lname" required />
+            <span class="error">*</span>
+
+        </div>
+        <div class="form-group">
+            <label>Shipment</label>
+            <input type="text" placeholder="shipment from" name="from" id="from" required />
+            <span class="error">*</span>
+            <input type="text" placeholder="shipment to" name="to" id="to" required />
+            <span class="error">*</span>
+        </div>
+        <div class="form-group">
+            <label>Consignment Info</label>
+            <input type="text" placeholder="company name" name="cname" id="cname" required />
+            <span class="error">*</span>
+            <input type="number" placeholder="weight" name="weight" id="weight" required />
+            <span class="error">*</span>
+            <input type="number" placeholder="volume" name="volume" id="volume" required />
+            <span class="error">*</span>
+        </div>
+        <div class="form-group">
+            <label>Contact Info</label>
+            <input type="email" placeholder="email" name="email" id="email" required />
+            <span class="error">*</span>
+            <input type="number" placeholder="phone prefix" name="prefix" id="prefix" required />
+            <span class="error">*</span>
+            <input type="number" placeholder="phone number" name="phone" id="phone" required />
+            <span class="error">*</span>
+        </div>
+        <div class="form-group">
+            <label>Message</label>
+            <textarea type="text" name="message" id="message"></textarea>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" name="submit" id="submit" class="btn btn-success" (click)="c('Close click')">Submit</button>
+        <button type="reset" name="reset" id="reset" class="btn btn-danger" (click)="c('Close click')">Clear</button>
+    </div>
+</ng-template>
