@@ -18,6 +18,8 @@ import { AppServices } from './appServices/appServices';
 import { HttpModule } from '@angular/http';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { TermsComponent } from './terms/terms.component';
+import { RateEnquiryComponent } from './rateEnquiry/rateEnquiry.component';
+// import { RateEnquiryComponent } from './rateEnquiry/rateEnquiry.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { TermsComponent } from './terms/terms.component';
     SearchComponent,
     AgentNetworkComponent,
     PrivacyComponent,
-    TermsComponent
+    TermsComponent,
+    RateEnquiryComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,8 @@ import { TermsComponent } from './terms/terms.component';
     NgbModule.forRoot(),
     AppRoutingModule
   ],
-  providers: [AppServices, {provide: LocationStrategy, useClass: HashLocationStrategy}],
+  entryComponents: [RateEnquiryComponent],
+  providers: [AppServices, { provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

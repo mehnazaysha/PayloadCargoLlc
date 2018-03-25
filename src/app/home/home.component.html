@@ -78,7 +78,7 @@
                     <p class="card-text">We develop comprehensive tailor made project logistics to meet our customer needs.</p>
                 </div>
                 <div class="card-footer">
-                    <button (click)="open(content)" class="btn btn-primary">Get Rate</button>
+                    <button (click)="appService.open()" class="btn btn-primary">Get Rate</button>
                 </div>
             </div>
         </div>
@@ -140,64 +140,3 @@
     <!-- /.row -->
 </div>
 <!-- /.container -->
-
-<ng-template #content let-c="close" let-d="dismiss">
-    <div class="modal-header">
-        <h4 class="modal-title">Rate Enquiry</h4>
-        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-    <div class="modal-body">
-        <div class="control-group form-group">
-            <div class="controls">
-                <label>Full Name:</label>
-                <input type="text" class="form-control" [(ngModel)]="name" name="name" placeholder="Full Name" required>
-                <p class="help-block"></p>
-            </div>
-        </div>
-        <div class="control-group form-group">
-            <div class="controls">
-                <label>Shipment:</label>
-                <div class="input-group">
-                    <input type="text" class="form-control" [(ngModel)]="shipmentFrom" name="shipmentFrom" placeholder="Shipment from" required>
-                    <input type="text" class="form-control" [(ngModel)]="shipmentTo" name="shipmentTo" placeholder="Shipment to" required>
-                </div>
-            </div>
-        </div>
-        <div class="control-group form-group">
-            <div class="controls">
-                <label>Consignment Info:</label>
-                <input type="text" class="form-control" placeholder="Company Name" [(ngModel)]="companyName" name="cname" required />
-                <label></label>
-                <div class="input-group">
-                    <input type="number" class="form-control" placeholder="Weight" [(ngModel)]="weight" name="weight" required />
-                    <input type="number" class="form-control" placeholder="Volume" [(ngModel)]="volume" name="volume" required />
-                </div>
-            </div>
-        </div>
-        <div class="control-group form-group">
-            <div class="controls">
-                <label>Contact Info:</label>
-                <input type="email" class="form-control" placeholder="Email Address" name="email" [(ngModel)]="email" required />
-                <label></label>
-                <div class="input-group">
-                    <input type="number" class="form-control" placeholder="Phone Prefix" name="prefix" [(ngModel)]="prefix" required />
-                    <input type="number" class="form-control" placeholder="Phone Number" name="phone" [(ngModel)]="phone" required />
-                </div>
-            </div>
-        </div>
-
-        <div class="control-group form-group">
-            <div class="controls">
-                <label>Message:</label>
-                <textarea type="text" class="form-control" name="message" [(ngModel)]="message"></textarea>
-                <p class="help-block"></p>
-            </div>
-        </div>
-    </div>
-    <div class="modal-footer">
-        <button type="submit" name="submit" class="btn btn-success" (click)="c('Close click')">Submit</button>
-        <button type="reset" name="reset" class="btn btn-danger" (click)="c('Close click')">Cancel</button>
-    </div>
-</ng-template>
