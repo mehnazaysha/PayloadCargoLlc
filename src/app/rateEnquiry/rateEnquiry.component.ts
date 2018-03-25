@@ -1,7 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { AppServices } from '../appServices/appServices';
+import { IRateModal } from './IRateModal';
+import { Http } from '@angular/http';
 
 
 @Component({
@@ -12,26 +13,13 @@ import { AppServices } from '../appServices/appServices';
 })
 export class RateEnquiryComponent {
 
-    // @Input() rateEnquiry: boolean = false
-    name: string = '';
-    shipmentFrom: string = '';
-    shipmentTo: string = '';
-    constructor(public activeModal: NgbActiveModal) {}
+    rate: IRateModal = { name: '', companyName: '', shipmentFrom: '', shipmentTo: '', email: '', message: '', phone: null, prefix: null, volume: null, weight: null }
 
-    // constructor(private modalService: NgbModal) { }
+    constructor(public activeModal: NgbActiveModal, private http: Http) { }
 
-    // ngOnInit(): void {
-    //     if (this.appservice.customTabButtons) {
-    //         console.log(this.appservice.customTabButtons)
-    //         // this.open();
-    //     }
-    // }
+    submit() {
+        // this.appService.GetRateInfo(this.rate);
+        this.activeModal.close();
+    }
 
-    // open() {
-    //     this.modalService.open(content, {
-    //         backdrop: 'static',
-    //         keyboard: false,
-    //         size: 'lg'
-    //     });
-    // }
 }

@@ -1,59 +1,74 @@
-<!-- <ng-template #content let-c="close" let-d="dismiss"> -->
-    <div class="modal-header">
-        <h4 class="modal-title">Rate Enquiry</h4>
-        <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-    <div class="modal-body">
-        <div class="control-group form-group">
-            <div class="controls">
-                <label>Full Name:</label>
-                <input type="text" class="form-control" [(ngModel)]="name" name="name" placeholder="Full Name" required>
-                <p class="help-block"></p>
-            </div>
-        </div>
-        <div class="control-group form-group">
-            <div class="controls">
-                <label>Shipment:</label>
-                <div class="input-group">
-                    <input type="text" class="form-control" [(ngModel)]="shipmentFrom" name="shipmentFrom" placeholder="Shipment from" required>
-                    <input type="text" class="form-control" [(ngModel)]="shipmentTo" name="shipmentTo" placeholder="Shipment to" required>
-                </div>
-            </div>
-        </div>
-        <div class="control-group form-group">
-            <div class="controls">
-                <label>Consignment Info:</label>
-                <input type="text" class="form-control" placeholder="Company Name" [(ngModel)]="companyName" name="cname" required />
-                <label></label>
-                <div class="input-group">
-                    <input type="number" class="form-control" placeholder="Weight" [(ngModel)]="weight" name="weight" required />
-                    <input type="number" class="form-control" placeholder="Volume" [(ngModel)]="volume" name="volume" required />
-                </div>
-            </div>
-        </div>
-        <div class="control-group form-group">
-            <div class="controls">
-                <label>Contact Info:</label>
-                <input type="email" class="form-control" placeholder="Email Address" name="email" [(ngModel)]="email" required />
-                <label></label>
-                <div class="input-group">
-                    <input type="number" class="form-control" placeholder="Phone Prefix" name="prefix" [(ngModel)]="prefix" required />
-                    <input type="number" class="form-control" placeholder="Phone Number" name="phone" [(ngModel)]="phone" required />
-                </div>
-            </div>
-        </div>
-        <div class="control-group form-group">
-            <div class="controls">
-                <label>Message:</label>
-                <textarea type="text" class="form-control" name="message" [(ngModel)]="message"></textarea>
-                <p class="help-block"></p>
-            </div>
+<div class="modal-header">
+    <h4 class="modal-title">Rate Enquiry</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <div class="form-group row">
+        <label for="Name" class="col-sm-3 col-form-label">Full Name:</label>
+        <div class="col-sm-9">
+            <input type="text" class="form-control" [(ngModel)]="rate.name" name="name" placeholder="Full Name">
         </div>
     </div>
-    <div class="modal-footer">
-        <button type="submit" name="submit" class="btn btn-success" (click)="c('Close click')">Submit</button>
-        <button type="reset" name="reset" class="btn btn-danger" (click)="c('Close click')">Cancel</button>
+
+    <div class="form-group row">
+        <label for="shipmentFrom" class="col-sm-3 col-form-label">Shipment From:</label>
+        <div class="col-sm-9">
+            <input type="text" class="form-control" [(ngModel)]="shipmentFrom" name="rate.shipmentFrom" placeholder="Shipment from" required>
+        </div>
     </div>
-<!-- </ng-template> -->
+
+    <div class="form-group row">
+        <label for="shipmentTo" class="col-sm-3 col-form-label">Shipment To:</label>
+        <div class="col-sm-9">
+            <input type="text" class="form-control" [(ngModel)]="shipmentTo" name="rate.shipmentTo" placeholder="Shipment to" required>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="consignmentInfo" class="col-sm-3 col-form-label">Consignment Info:</label>
+        <div class="col-sm-9">
+            <input type="text" class="form-control" placeholder="Company Name" [(ngModel)]="rate.companyName" name="cname" required />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-3 col-form-label"></label>
+        <div class="col-sm-4">
+            <input type="number" class="form-control" placeholder="Weight" [(ngModel)]="rate.weight" name="weight" required />
+        </div>
+        <div class="col-sm-4">
+            <input type="number" class="form-control" placeholder="Volume" [(ngModel)]="rate.volume" name="volume" required />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="contactInfo" class="col-sm-3 col-form-label">Email Info:</label>
+        <div class="col-sm-9">
+            <input type="email" class="form-control" placeholder="Email Address" name="email" [(ngModel)]="rate.email" required />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-3 col-form-label">Contact Info:</label>
+        <div class="col-sm-3 ">
+            <input type="number" class="form-control" placeholder="Phone Prefix" name="prefix" [(ngModel)]="rate.prefix" required />
+        </div>
+        <div class="col-sm-6">
+            <input type="number" class="form-control" placeholder="Phone Number" name="phone" [(ngModel)]="rate.phone" required />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="message" class="col-sm-3 col-form-label">Message:</label>
+        <div class="col-sm-9">
+            <textarea type="text" class="form-control" name="message" [(ngModel)]="rate.message"></textarea>
+        </div>
+    </div>
+
+</div>
+<div class="modal-footer">
+    <button type="submit" name="submit" class="btn btn-success" (click)="submit()">Submit</button>
+    <button type="reset" name="reset" class="btn btn-danger" (click)="activeModal.dismiss('Cross click')">Cancel</button>
+</div>

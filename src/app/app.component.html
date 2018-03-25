@@ -14,7 +14,7 @@
         <a class="nav-item nav-link" routerLinkActive="active" routerLink="services">Services</a>
         <a class="nav-item nav-link" routerLinkActive="active" routerLink="news-events">Events</a>
         <a class="nav-item nav-link" routerLinkActive="active" routerLink="careers">Careers</a>
-        <a class="nav-item nav-link" routerLinkActive="active" routerLink="contact">Contact</a>
+        <a class="nav-item nav-link" routerLinkActive="active" routerLink="contactus">Contact Us</a>
       </ul>
     </div>
   </div>
@@ -30,25 +30,25 @@
     <div class="row text-center">
       <div class="col-md-6">
         <h4 style="color:white;text-decoration:none;">Quick Access</h4>
-        <span>
-          <span (click)="appService.open()" style="color: #007bff;" class="getrate">Get Rate</span>|
+        <span style="color: #007bff;">
+          <span (click)="appService.open()" class="getrate">Get Rate</span> |
           <a href="http://www.aircargotracking.net" target="_blank">Track a Shipment</a> |
-          <a href="agent_network.HTML">Our Agent Network</a>
+          <a routerLink="agent-network">Our Agent Network</a>
         </span>
       </div>
       <div class="col-md-6">
         <h4 style="color:white;text-decoration:none;">PAYLOAD CARGO LLC</h4>
-        <span>
+        <span style="color: #007bff;">
           <a routerLink="#">Home</a> |
-          <a routerLink="/aboutus">About Us</a> |
+          <a routerLink="aboutus">About Us</a> |
           <a routerLink="services">Services</a> |
           <a routerLink="careers">Career</a> |
-          <a routerLink="contact">Contact Us</a>
+          <a routerLink="contactus">Contact Us</a>
         </span>
         <div>
           <span>
-            <a href="privacy.html" style="color:white;text-decoration:none;">Privacy Policy</a> |
-            <a href="terms.html" style="color:white;text-decoration:none;">Terms</a>
+            <a routerLink="privacy" style="color:white;text-decoration:none;">Privacy Policy</a> |
+            <a routerLink="terms" style="color:white;text-decoration:none;">Terms</a>
           </span>
         </div>
       </div>
