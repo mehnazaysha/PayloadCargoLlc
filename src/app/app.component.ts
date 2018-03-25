@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AppServices } from './appServices/appServices';
 import { Router, NavigationEnd } from '@angular/router';
+import { ModalServices } from './appServices/modalServices';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,7 @@ import { Router, NavigationEnd } from '@angular/router';
 })
 export class AppComponent implements OnInit {
  
-  constructor(private appService: AppServices, private router: Router) { }
+  constructor(private appService: ModalServices, private router: Router) { }
 
   ngOnInit() {
     this.router.events.subscribe((evt) => {

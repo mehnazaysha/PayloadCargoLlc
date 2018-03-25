@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AppServices } from '../appServices/appServices';
+import { AppHttpServices } from '../appServices/appHttpServices';
 
 @Component({
     moduleId: "ContactComponent",
@@ -15,7 +15,7 @@ export class ContactComponent {
     message: string = '';
     failedEmail: boolean = false;
 
-    constructor(private appService: AppServices, private router: Router) { }
+    constructor(private appService: AppHttpServices, private router: Router) { }
 
     open(content) {
         this.failedEmail = false;

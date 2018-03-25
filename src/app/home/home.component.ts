@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AppServices } from '../appServices/appServices';
+import { ModalServices } from '../appServices/modalServices';
 
 
 @Component({
@@ -14,6 +14,6 @@ export class HomeComponent implements OnInit {
     ngOnInit() {
     }
 
-    constructor(private appService: AppServices) { }
+    constructor(private appService: ModalServices) { }
 
 }
