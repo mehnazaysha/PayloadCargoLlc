@@ -18,6 +18,7 @@ export class ContactComponent {
     constructor(private appService: AppServices, private router: Router) { }
 
     open(content) {
+        this.failedEmail = false;
         this.appService.sendEmail(this.name, this.phone, this.email, this.message).subscribe(res => {
             this.router.navigate(['/home']);
         }, error => {

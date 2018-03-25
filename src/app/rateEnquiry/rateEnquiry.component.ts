@@ -12,14 +12,23 @@ import { Http } from '@angular/http';
     styleUrls: ['./rateEnquiry.component.css']
 })
 export class RateEnquiryComponent {
+    private emailUrl = './assets/rate_mail_form.php';
 
     rate: IRateModal = { name: '', companyName: '', shipmentFrom: '', shipmentTo: '', email: '', message: '', phone: null, prefix: null, volume: null, weight: null }
 
     constructor(public activeModal: NgbActiveModal, private http: Http) { }
 
     submit() {
-        // this.appService.GetRateInfo(this.rate);
-        this.activeModal.close();
+        this.http.post(this.emailUrl, JSON.stringify(this.rate)).map(response => {
+            return response;
+        }).subscribe(res => {
+            this.activeModal.close();
+        }, error => {
+            // this.failedEmail = true;
+            console.log('RateEnquiryComponent Error', error);
+        });;
+
+
     }
 
 }
