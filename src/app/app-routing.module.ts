@@ -16,7 +16,7 @@ const routes: Routes = [
     { path: 'aboutus', component: AboutUsComponent },
     { path: 'careers', component: CareersComponent },
     { path: 'services', component: ServicesComponent },
-    { path: 'contact', component: ContactComponent },
+    { path: 'contactus', component: ContactComponent },
     { path: 'search', component: SearchComponent },
     { path: 'agent-network', component: AgentNetworkComponent },
     { path: 'news-events', component: NewsEventsComponent },

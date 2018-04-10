@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalServices } from '../appServices/modalServices';
 
 
 @Component({
@@ -10,22 +10,10 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
     styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-    name: string = '';
-    shipmentFrom: string = '';
-    shipmentTo: string = '';
-
 
     ngOnInit() {
     }
 
-    constructor(private modalService: NgbModal) { }
-
-    open(content) {
-        this.modalService.open(content, {
-            backdrop: 'static',
-            keyboard: false,
-            size: 'lg'
-        });
-    }
+    constructor(private appService: ModalServices) { }
 
 }

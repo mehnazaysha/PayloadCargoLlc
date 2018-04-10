@@ -14,10 +14,13 @@ import { NewsEventsComponent } from './news-events/news-events.component';
 import { SearchComponent } from './search/search.component';
 import { AgentNetworkComponent } from './agent_network/agentNetwork.component';
 import { FormsModule } from '@angular/forms';
-import { AppServices } from './appServices/appServices';
 import { HttpModule } from '@angular/http';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { TermsComponent } from './terms/terms.component';
+import { RateEnquiryComponent } from './rateEnquiry/rateEnquiry.component';
+import { ModalServices } from './appServices/modalServices';
+import { AppHttpServices } from './appServices/appHttpServices';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +34,8 @@ import { TermsComponent } from './terms/terms.component';
     SearchComponent,
     AgentNetworkComponent,
     PrivacyComponent,
-    TermsComponent
+    TermsComponent,
+    RateEnquiryComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +44,8 @@ import { TermsComponent } from './terms/terms.component';
     NgbModule.forRoot(),
     AppRoutingModule
   ],
-  providers: [AppServices, {provide: LocationStrategy, useClass: HashLocationStrategy}],
+  entryComponents: [RateEnquiryComponent],
+  providers: [ModalServices, AppHttpServices, { provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
