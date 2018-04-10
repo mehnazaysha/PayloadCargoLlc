@@ -11,4 +11,14 @@
 .portfolio-item {
     margin-bottom: 30px;
 }
+.carousel-caption h1{
+    font-weight:bolder;
+    font-size: 5em;
+    font-family:inherit;
+}
+.carousel-caption p{
+    font-weight:bolder;
+    font-size: 1em;
+    font-family:inherit;
+}
 
