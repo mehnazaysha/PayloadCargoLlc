@@ -1,5 +1,5 @@
 <!-- Navigation -->
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
     <a class="nav-item nav-link" routerLinkActive="active" routerLink="home">
       <img class="img-responsive" style="display:inline;width: 150px;" src="./assets/images/logo.png" />
@@ -15,6 +15,14 @@
         <a class="nav-item nav-link" routerLinkActive="active" routerLink="news-events">Events</a>
         <a class="nav-item nav-link" routerLinkActive="active" routerLink="careers">Careers</a>
         <a class="nav-item nav-link" routerLinkActive="active" routerLink="contactus">Contact Us</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" routerLinkActive="active" role="button" aria-haspopup="true" aria-expanded="false">Services</a>
+          <div class="dropdown-menu" routerLink="services">
+            <a class="dropdown-item" fragment="landTransport" (click)="goToRoute('landTransport')">LAND TRANSPORT</a>
+            <a class="dropdown-item" fragment="airFreight" (click)="goToRoute('airFreight')">AIR FREIGHT</a>
+            <a class="dropdown-item" fragment="seaFreight" (click)="goToRoute('seaFreight')">SEA FREIGHT</a>
+          </div>
+        </li>
       </ul>
     </div>
   </div>
@@ -22,7 +30,6 @@
 
 <!-- Page Content -->
 <router-outlet></router-outlet>
-
 
 <!-- Footer -->
 <footer class="py-5" style="padding-top: 10rem !important;">
